@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Initial Power Level:</h2>
+  <form (submit)="onSubmit()">
+    <select name="power" [(ngModel)]="initPower">
+      <option *ngFor="let power of powers" value="{{power}}">{{ power }}</option>
+    </select>
+    <input type="submit" value="Calculate Powers">
+  </form>
+  <!-- <h1>{{ initPower }}</h1> -->
+  <br>
+  <hr>
+  <br>
+  <div class="sections">
+    <app-human class="section" [initPower]="initPower"></app-human>
+
+    <app-saiyan class="section" [initPower]="initPower"></app-saiyan>
+
+    <app-super-saiyan class="section" [initPower]="initPower"></app-super-saiyan>
+
+    <app-super-saiyan-2 class="section" [initPower]="initPower"></app-super-saiyan-2>
+
+    <app-super-saiyan-3 class="section" [initPower]="initPower"></app-super-saiyan-3>
+
+    <app-super-saiyan-4 class="section" [initPower]="initPower"></app-super-saiyan-4>
+  </div>
+</div>

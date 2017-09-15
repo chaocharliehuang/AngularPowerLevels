@@ -1,0 +1,3 @@
+<h3>Super Saiyan 2</h3>
+<p>Power Level: <span *ngIf="initPower !== NaN">{{ initPower*150 }}</span></p>
+<h3 *ngIf="initPower*150 > 9000">"Over 9000!"</h3>
